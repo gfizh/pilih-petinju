@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+body {
+    background-image: url('tnju.jpg'); /* Pastikan path gambar benar */
+    background-size: cover; /* Mengubah ukuran menjadi cover */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+}
+
+.navbar {
+    padding: 20px 40px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand {
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Mengatur margin horizontal */
+}
+
+.nav-links li a {
+    font-family: sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: burlywood;
+    border-radius: 10px;
+    color: black;
+}
+
+.intro {
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+.intro h2 {
+    color: white;
+    text-transform: uppercase;
+    justify-content: center;
+    font-family: sans-serif;
+    display: flex;
+    font-size: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+        align-items: flex-start; /* Menyusun konten ke kiri */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Mengubah arah navbar menjadi kolom */
+        width: 100%; /* Mengatur lebar navbar menjadi 100% */
+        display: none; /* Menyembunyikan menu untuk saat ini */
+    }
+
+    .nav-links.active {
+        display: flex; /* Menampilkan menu saat aktif */
+    }
+
+    .menu-toggle {
+        display: flex; /* Menampilkan tombol toggle */
+        flex-direction: column; /* Menyusun bar menjadi kolom */
+        cursor: pointer; /* Menambahkan cursor pointer */
+    }
+
+    .menu-toggle .bar {
+        height: 3px; /* Tinggi bar */
+        width: 25px; /* Lebar bar */
+        background-color: white; /* Warna bar */
+        margin: 4px 0; /* Margin antara bar */
+    }
+}
