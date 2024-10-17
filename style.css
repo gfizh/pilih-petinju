@@ -5,7 +5,7 @@
 
 html, body {
     height: 100%;
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+    overflow-x: hidden;
 }
 
 body {
@@ -76,33 +76,36 @@ body {
     font-size: 40px;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+}
+
 
 @media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column; /* Mengubah arah flex menjadi kolom */
-        align-items: flex-start; /* Menyusun konten ke kiri */
-    }
-
     .nav-links {
-        flex-direction: column; /* Mengubah arah navbar menjadi kolom */
-        width: 100%; /* Mengatur lebar navbar menjadi 100% */
-        display: none; /* Menyembunyikan menu untuk saat ini */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* adjust based on navbar height */
+        left: 0;
+        background: #333;
+        width: 100%;
     }
 
     .nav-links.active {
-        display: flex; /* Menampilkan menu saat aktif */
+        display: flex;
     }
 
-    .menu-toggle {
-        display: flex; /* Menampilkan tombol toggle */
-        flex-direction: column; /* Menyusun bar menjadi kolom */
-        cursor: pointer; /* Menambahkan cursor pointer */
-    }
-
-    .menu-toggle .bar {
-        height: 3px; /* Tinggi bar */
-        width: 25px; /* Lebar bar */
-        background-color: white; /* Warna bar */
-        margin: 4px 0; /* Margin antara bar */
+    .hamburger {
+        display: flex;
     }
 }
